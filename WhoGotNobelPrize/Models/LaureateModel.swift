@@ -1,24 +1,46 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  LaureateModel.swift
-//  WhoGotNobelPrize
-//
-//  Created by BERAT ALTUNTAŞ on 31.05.2022.
-//
+//   let laureatesModel = try? newJSONDecoder().decode(LaureatesModel.self, from: jsonData)
 
 import Foundation
 
-// MARK: - LaureateModel
+// MARK: - LaureatesModel
 struct LaureatesModel: Codable {
+	let laureates: [Laureate]?
+	let meta: LaureateMeta?
+	let links: LaureateLinks?
+}
+
+// MARK: - Links
+struct LaureateLinks: Codable {
+	let first, linksSelf, next, last: String?
+
+	enum CodingKeys: String, CodingKey {
+		case first
+		case linksSelf = "self"
+		case next, last
+	}
+}
+
+// MARK: - Meta
+struct LaureateMeta: Codable {
+	let offset, limit, count: Int?
+	let terms, license, disclaimer: String?
+}
+
+// MARK: - Laureate
+struct Laureate: Codable {
 	let id: String?
-	let knownName, givenName, familyName, fullName: LaureateFamilyName?
-	let fileName, gender: String?
-	let birth, death: LaureateBirth?
+	let knownName, givenName, familyName, fullName: LaureateName?
+	let fileName: String?
+	let gender: String?
+	let birth: LaureateBirth?
 	let wikipedia: LaureateWikipedia?
 	let wikidata: LaureateWikidata?
 	let sameAs: [String]?
 	let links: [LaureateLink]?
 	let nobelPrizes: [LaureateNobelPrize]?
-	let meta: LaureateMeta?
 }
 
 // MARK: - Birth
@@ -29,8 +51,7 @@ struct LaureateBirth: Codable {
 
 // MARK: - Place
 struct LaureatePlace: Codable {
-	let city, country, cityNow, countryNow: LaureateCity?
-	let continent, locationString: LaureateCity?
+	let city, country, cityNow, countryNow, continent, locationString: LaureateCity?
 }
 
 // MARK: - City
@@ -39,46 +60,51 @@ struct LaureateCity: Codable {
 	let sameAs: [String]?
 }
 
-// MARK: - FamilyName
-struct LaureateFamilyName: Codable {
+// MARK: - Name
+struct LaureateName: Codable {
 	let en, se: String?
 }
 
+
 // MARK: - Link
 struct LaureateLink: Codable {
-	let rel: String?
-	let href: String?
-	let action, types, title: String?
+	let rel, href, action, types, title: String?
 	let linkClass: [String]?
+
+	enum CodingKeys: String, CodingKey {
+		case rel, href, action, types, title
+		case linkClass = "class"
+	}
 }
 
-// MARK: - Meta
-struct LaureateMeta: Codable {
-	let terms, license, disclaimer: String?
-}
 
 // MARK: - NobelPrize
 struct LaureateNobelPrize: Codable {
 	let awardYear: String?
 	let category, categoryFullName: LaureateCity?
-	let sortOrder, portion, prizeStatus: String?
-	let motivation: LaureateFamilyName?
+	let sortOrder, portion, dateAwarded: String?
+	let prizeStatus: String?
+	let motivation: LaureateCity?
 	let prizeAmount, prizeAmountAdjusted: Int?
 	let affiliations: [LaureateAffiliation]?
 	let links: [LaureateLink]?
+	let residences: [LaureateResidence]?
 }
 
 // MARK: - Affiliation
 struct LaureateAffiliation: Codable {
 	let name: LaureateCity?
 	let nameNow: LaureateNameNow?
-	let city, country, cityNow, countryNow: LaureateCity?
-	let locationString: LaureateCity?
+	let city, country, cityNow, countryNow, locationString: LaureateCity?
 }
 
 // MARK: - NameNow
 struct LaureateNameNow: Codable {
 	let en: String?
+}
+// MARK: - Residence
+struct LaureateResidence: Codable {
+	let country, countryNow, locationString: LaureateCity?
 }
 
 // MARK: - Wikidata

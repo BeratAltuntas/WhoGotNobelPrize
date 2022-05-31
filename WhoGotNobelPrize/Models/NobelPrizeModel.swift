@@ -46,7 +46,7 @@ struct NobelPrizeLaureate: Codable {
 	let knownName, fullName: NobelPrizeName?
 	let portion, sortOrder: String?
 	let motivation: NobelPrizeCategory?
-	let links: [NobelPrizeLink]?
+	let linksNobel: [NobelPrizeLink]?
 	let orgName: NobelPrizeOrgName?
 	let nativeName: String?
 }

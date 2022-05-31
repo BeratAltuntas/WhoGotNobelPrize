@@ -16,8 +16,7 @@ final class NetworkManager {
 	typealias Completion<T> = (Result<T, ApiError>)-> Void where T: Decodable
 
 	func fetchData<T: Decodable>(endPoint: String, type: T?.Type, completion: @escaping Completion<T> ) {
-	 let urlStr = endPoint+String("Config")
-	 guard let url = URL(string: urlStr) else { return }
+	 guard let url = URL(string: endPoint) else { return }
 	 
 	 let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
 		 if let error = error {
