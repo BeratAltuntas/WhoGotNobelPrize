@@ -16,6 +16,10 @@
 		F417D3642843FCB8009F8693 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F417D3632843FCB8009F8693 /* Storyboard.storyboard */; };
 		F417D3662843FCEB009F8693 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D3652843FCEB009F8693 /* DetailViewController.swift */; };
 		F417D3682843FCFB009F8693 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D3672843FCFB009F8693 /* DetailViewModel.swift */; };
+		F4D7DD3F2846A5C600B3A235 /* LaureateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */; };
+		F4D7DD412846A72000B3A235 /* NobelPrizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */; };
+		F4D7DD442846A83B00B3A235 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD432846A83B00B3A235 /* NetworkManager.swift */; };
+		F4D7DD462846A93F00B3A235 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD452846A93F00B3A235 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		F417D3632843FCB8009F8693 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		F417D3652843FCEB009F8693 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F417D3672843FCFB009F8693 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureateModel.swift; sourceTree = "<group>"; };
+		F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeModel.swift; sourceTree = "<group>"; };
+		F4D7DD432846A83B00B3A235 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F4D7DD452846A93F00B3A235 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +70,14 @@
 		F417D34528422ED3009F8693 /* WhoGotNobelPrize */ = {
 			isa = PBXGroup;
 			children = (
+				F4D7DD422846A82600B3A235 /* Managers */,
 				F417D35E28422F5A009F8693 /* Supporting Files */,
 				F417D35D28422F4F009F8693 /* Models */,
 				F417D35C28422F35009F8693 /* ViewModels */,
 				F417D35B28422F29009F8693 /* Controllers */,
 				F417D35A28422F17009F8693 /* Views */,
 				F417D35428422ED5009F8693 /* Info.plist */,
+				F4D7DD452846A93F00B3A235 /* Config.swift */,
 			);
 			path = WhoGotNobelPrize;
 			sourceTree = "<group>";
@@ -102,6 +112,8 @@
 		F417D35D28422F4F009F8693 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */,
+				F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +126,14 @@
 				F417D34F28422ED5009F8693 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4D7DD422846A82600B3A235 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7DD432846A83B00B3A235 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,10 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D7DD442846A83B00B3A235 /* NetworkManager.swift in Sources */,
+				F4D7DD3F2846A5C600B3A235 /* LaureateModel.swift in Sources */,
 				F417D34B28422ED3009F8693 /* HomeViewController.swift in Sources */,
 				F417D3682843FCFB009F8693 /* DetailViewModel.swift in Sources */,
+				F4D7DD412846A72000B3A235 /* NobelPrizeModel.swift in Sources */,
 				F417D34728422ED3009F8693 /* AppDelegate.swift in Sources */,
 				F417D3662843FCEB009F8693 /* DetailViewController.swift in Sources */,
+				F4D7DD462846A93F00B3A235 /* Config.swift in Sources */,
 				F417D34928422ED3009F8693 /* SceneDelegate.swift in Sources */,
 				F417D3602843F860009F8693 /* HomeViewModel.swift in Sources */,
 			);
