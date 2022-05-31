@@ -4,6 +4,8 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 WhoGotNobelPrize/WhoGotNobelPrize/WhoGotNobelPrize/Config.swift
+Config.swift
+config.swift
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
