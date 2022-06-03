@@ -15,18 +15,7 @@ final class HomeViewController: UIViewController {
 		}
 	}
 	override func viewDidLoad() {
-		FetchData()
-	}
-	func FetchData() {
-		NetworkManager.shared.fetchData(endPoint: Config.laureateUrl, type: LaureatesModel?.self) { response in
-			switch response {
-			case .success(let result):
-				print(result.laureates?.first?.familyName?.en)
-				break
-			case .failure(let error):
-				print(error)
-			}
-		}
+		viewModel.FetchData()
 	}
 }
 

@@ -16,6 +16,7 @@
 		F417D3642843FCB8009F8693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F417D3632843FCB8009F8693 /* Main.storyboard */; };
 		F417D3662843FCEB009F8693 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D3652843FCEB009F8693 /* DetailViewController.swift */; };
 		F417D3682843FCFB009F8693 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D3672843FCFB009F8693 /* DetailViewModel.swift */; };
+		F4C1330E284A721900C33E13 /* KingFisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1330D284A721900C33E13 /* KingFisherManager.swift */; };
 		F4D7DD3F2846A5C600B3A235 /* LaureateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */; };
 		F4D7DD412846A72000B3A235 /* NobelPrizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */; };
 		F4D7DD442846A83B00B3A235 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD432846A83B00B3A235 /* NetworkManager.swift */; };
@@ -34,6 +35,7 @@
 		F417D3632843FCB8009F8693 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F417D3652843FCEB009F8693 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F417D3672843FCFB009F8693 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F4C1330D284A721900C33E13 /* KingFisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherManager.swift; sourceTree = "<group>"; };
 		F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureateModel.swift; sourceTree = "<group>"; };
 		F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeModel.swift; sourceTree = "<group>"; };
 		F4D7DD432846A83B00B3A235 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D7DD432846A83B00B3A235 /* NetworkManager.swift */,
+				F4C1330D284A721900C33E13 /* KingFisherManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				F4D7DD412846A72000B3A235 /* NobelPrizeModel.swift in Sources */,
 				F417D34728422ED3009F8693 /* AppDelegate.swift in Sources */,
 				F417D3662843FCEB009F8693 /* DetailViewController.swift in Sources */,
+				F4C1330E284A721900C33E13 /* KingFisherManager.swift in Sources */,
 				F417D34928422ED3009F8693 /* SceneDelegate.swift in Sources */,
 				F417D3602843F860009F8693 /* HomeViewModel.swift in Sources */,
 			);
