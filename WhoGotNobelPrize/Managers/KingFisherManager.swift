@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 final class KingFisherManager {
 	static let shared = KingFisherManager()
