@@ -7,8 +7,8 @@
 
 import UIKit
 enum HomeViewControllerConstants {
-	static let segueIndetifier = ""
-	static let tableViewCellIdentifier = ""
+	static let segueIndetifier = "winnerDetailSegue"
+	static let tableViewCellIdentifier = "winnersTableViewCell"
 }
 
 // MARK: - HomeViewController
@@ -18,8 +18,10 @@ final class HomeViewController: UIViewController {
 			viewModel.delegate = self
 		}
 	}
+	@IBOutlet private weak var tableView: UITableView!
 	override func viewDidLoad() {
-		viewModel.FetchData()
+		self.viewModel = HomeViewModel()
+		viewModel.LoadUI()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,5 +34,18 @@ final class HomeViewController: UIViewController {
 
 // MARK: - Extension: HomeViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
+	var titleUI: String {
+		get {
+			self.title!
+		}
+		set(value) {
+			self.title = value
+		}
+	}
 	
+	func ReloadTableView() {
+		DispatchQueue.main.async { [weak self] in
+			self?.tableView.reloadData()
+		}
+	}
 }

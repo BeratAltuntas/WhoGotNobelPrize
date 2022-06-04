@@ -8,7 +8,7 @@ import UIKit
 
 extension HomeViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		performSegue(withIdentifier: "", sender: self)
+		performSegue(withIdentifier: HomeViewControllerConstants.segueIndetifier, sender: self)
 	}
 }
 
