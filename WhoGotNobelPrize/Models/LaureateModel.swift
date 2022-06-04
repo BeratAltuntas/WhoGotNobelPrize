@@ -40,6 +40,7 @@ struct Laureate: Codable {
 	let wikidata: LaureateWikidata?
 	let sameAs: [String]?
 	let links: [LaureateLink]?
+	let orgName: OrgName?
 	let nobelPrizes: [LaureateNobelPrize]?
 }
 
@@ -48,7 +49,11 @@ struct LaureateBirth: Codable {
 	let date: String?
 	let place: LaureatePlace?
 }
-
+// MARK: - OrgName
+struct OrgName: Codable {
+	let en, no, se: String?
+	let sameAs: [String]?
+}
 // MARK: - Place
 struct LaureatePlace: Codable {
 	let city, country, cityNow, countryNow, continent, locationString: LaureateCity?

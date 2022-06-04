@@ -21,8 +21,11 @@ extension HomeViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewControllerConstants.tableViewCellIdentifier, for: indexPath)
-		guard let name = viewModel.winners?[indexPath.row].fullName else { return UITableViewCell() }
-		cell.textLabel?.text = name.en
+		if let name = viewModel.winners?[indexPath.row].fullName?.en {
+			cell.textLabel?.text = name
+		} else if let orgName = viewModel.winners?[indexPath.row].orgName?.en {
+			cell.textLabel?.text = orgName
+		}
 		return cell
 	}
 	
