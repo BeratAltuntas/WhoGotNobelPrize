@@ -78,25 +78,31 @@
         <scene sceneID="Qy3-qY-PO9">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="6is-xB-HtW" customClass="DetailViewController" customModule="WhoGotNobelPrize" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NNg-V4-iaN">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="NNg-V4-iaN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kju-hU-4Cz">
-                                <rect key="frame" x="20" y="49" width="41" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kju-hU-4Cz">
+                                <rect key="frame" x="20" y="49" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="wog-zq-TBe"/>
+                                </constraints>
                                 <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="GoHomePage_TUI:" destination="6is-xB-HtW" eventType="touchUpInside" id="QvH-jb-R4i"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-8S-lxq">
-                                <rect key="frame" x="0.0" y="86" width="414" height="364"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="364"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="364" id="Uee-jf-qWW"/>
+                                </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBc-yT-C0S">
-                                <rect key="frame" x="0.0" y="450" width="414" height="550"/>
+                                <rect key="frame" x="0.0" y="463" width="414" height="450"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrC-HC-s4N">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jacobus Henricus van 't Hoff / The Nobel Prize in Chemistry 1901" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umv-1E-hoP">
                                                 <rect key="frame" x="26" y="48" width="362" height="120"/>
@@ -107,7 +113,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-bB-dyb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-bB-dyb">
                                                 <rect key="frame" x="26" y="178" width="362" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="zuv-46-7if"/>
@@ -124,25 +130,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City ​​of residence: Berlin / Germany" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zm-pg-oVs">
-                                                <rect key="frame" x="26" y="318" width="362" height="21"/>
+                                                <rect key="frame" x="26" y="313" width="362" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="link: Jacobus H. van 't Hoff - Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfb-M3-G82">
-                                                <rect key="frame" x="26" y="416" width="362" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="link: The Nobel Prize in Chemistry 1901" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-Ll-ZZF">
-                                                <rect key="frame" x="26" y="451" width="362" height="20"/>
+                                                <rect key="frame" x="26" y="411" width="362" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="II5-Nr-nPI">
-                                                <rect key="frame" x="26" y="379" width="362" height="27"/>
+                                                <rect key="frame" x="26" y="374" width="362" height="27"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -150,19 +150,17 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="S7p-Ll-ZZF" firstAttribute="trailing" secondItem="Kfb-M3-G82" secondAttribute="trailing" id="2GH-4f-MNY"/>
-                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="S7p-Ll-ZZF" secondAttribute="bottom" constant="79" id="50a-ij-3ae"/>
                                             <constraint firstItem="riZ-vO-7Hm" firstAttribute="leading" secondItem="umv-1E-hoP" secondAttribute="leading" id="73y-Vg-BOq"/>
-                                            <constraint firstItem="S7p-Ll-ZZF" firstAttribute="top" secondItem="Kfb-M3-G82" secondAttribute="bottom" constant="15" id="8sr-fN-zyy"/>
                                             <constraint firstItem="II5-Nr-nPI" firstAttribute="top" secondItem="6Zm-pg-oVs" secondAttribute="bottom" constant="40" id="AH3-Ka-m2h"/>
                                             <constraint firstItem="Kfb-M3-G82" firstAttribute="trailing" secondItem="6Zm-pg-oVs" secondAttribute="trailing" id="B7c-8e-2ey"/>
                                             <constraint firstItem="umv-1E-hoP" firstAttribute="top" secondItem="riZ-vO-7Hm" secondAttribute="bottom" constant="10" id="GdH-JY-hD8"/>
+                                            <constraint firstAttribute="height" constant="450" id="MwE-hK-bkK"/>
                                             <constraint firstItem="riZ-vO-7Hm" firstAttribute="trailing" secondItem="umv-1E-hoP" secondAttribute="trailing" id="Q8f-FI-R6t"/>
                                             <constraint firstItem="II5-Nr-nPI" firstAttribute="trailing" secondItem="6Zm-pg-oVs" secondAttribute="trailing" id="QyX-he-emT"/>
                                             <constraint firstItem="Kfb-M3-G82" firstAttribute="top" secondItem="II5-Nr-nPI" secondAttribute="bottom" constant="10" id="Tkr-eT-6fJ"/>
                                             <constraint firstAttribute="trailing" secondItem="riZ-vO-7Hm" secondAttribute="trailing" constant="26" id="V98-HJ-We2"/>
                                             <constraint firstItem="6Zm-pg-oVs" firstAttribute="trailing" secondItem="YWi-bB-dyb" secondAttribute="trailing" id="Wse-Ui-iYp"/>
-                                            <constraint firstItem="6Zm-pg-oVs" firstAttribute="top" secondItem="YWi-bB-dyb" secondAttribute="bottom" constant="20" id="YKQ-iX-u1y"/>
+                                            <constraint firstItem="6Zm-pg-oVs" firstAttribute="top" secondItem="YWi-bB-dyb" secondAttribute="bottom" constant="15" id="YKQ-iX-u1y"/>
                                             <constraint firstItem="riZ-vO-7Hm" firstAttribute="top" secondItem="KrC-HC-s4N" secondAttribute="top" constant="22" id="Ypv-fx-pR9"/>
                                             <constraint firstItem="riZ-vO-7Hm" firstAttribute="leading" secondItem="KrC-HC-s4N" secondAttribute="leading" constant="26" id="bx7-NE-Mj3"/>
                                             <constraint firstItem="Kfb-M3-G82" firstAttribute="leading" secondItem="6Zm-pg-oVs" secondAttribute="leading" id="ffQ-fd-7Rx"/>
@@ -171,7 +169,7 @@
                                             <constraint firstItem="6Zm-pg-oVs" firstAttribute="leading" secondItem="YWi-bB-dyb" secondAttribute="leading" id="hVR-Pw-2TL"/>
                                             <constraint firstItem="YWi-bB-dyb" firstAttribute="leading" secondItem="umv-1E-hoP" secondAttribute="leading" id="v0X-N6-GEe"/>
                                             <constraint firstItem="YWi-bB-dyb" firstAttribute="trailing" secondItem="umv-1E-hoP" secondAttribute="trailing" id="wxb-Zc-PUD"/>
-                                            <constraint firstItem="S7p-Ll-ZZF" firstAttribute="leading" secondItem="Kfb-M3-G82" secondAttribute="leading" id="zl6-b9-aWC"/>
+                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Kfb-M3-G82" secondAttribute="bottom" constant="19" id="zi5-0C-prf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -180,8 +178,7 @@
                                     <constraint firstItem="KrC-HC-s4N" firstAttribute="top" secondItem="qBc-yT-C0S" secondAttribute="top" id="2h2-Au-uqJ"/>
                                     <constraint firstAttribute="bottom" secondItem="KrC-HC-s4N" secondAttribute="bottom" id="3m6-XB-mrF"/>
                                     <constraint firstItem="KrC-HC-s4N" firstAttribute="leading" secondItem="qBc-yT-C0S" secondAttribute="leading" id="477-Kp-gIU"/>
-                                    <constraint firstAttribute="height" constant="550" id="Em1-1y-FgW"/>
-                                    <constraint firstItem="KrC-HC-s4N" firstAttribute="height" secondItem="qBc-yT-C0S" secondAttribute="height" id="oza-Ou-ZPB"/>
+                                    <constraint firstAttribute="height" constant="450" id="Em1-1y-FgW"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Xjk-gw-OJM"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="7bw-Y5-NaB"/>
@@ -191,14 +188,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vcC-8S-lxq" firstAttribute="leading" secondItem="x9D-U1-k6J" secondAttribute="leading" id="1Uz-9h-STA"/>
+                            <constraint firstItem="vcC-8S-lxq" firstAttribute="top" secondItem="kju-hU-4Cz" secondAttribute="bottom" constant="5" id="3BA-mr-xPt"/>
                             <constraint firstItem="qBc-yT-C0S" firstAttribute="trailing" secondItem="x9D-U1-k6J" secondAttribute="trailing" id="42t-7b-pKd"/>
                             <constraint firstItem="kju-hU-4Cz" firstAttribute="leading" secondItem="x9D-U1-k6J" secondAttribute="leading" constant="20" id="73O-DZ-pMQ"/>
                             <constraint firstItem="qBc-yT-C0S" firstAttribute="top" secondItem="vcC-8S-lxq" secondAttribute="bottom" id="EN3-3k-OEF"/>
                             <constraint firstAttribute="trailing" secondItem="vcC-8S-lxq" secondAttribute="trailing" id="EpW-W4-lp8"/>
-                            <constraint firstItem="vcC-8S-lxq" firstAttribute="top" secondItem="kju-hU-4Cz" secondAttribute="bottom" constant="5" id="Sse-PQ-f5t"/>
-                            <constraint firstItem="kju-hU-4Cz" firstAttribute="top" secondItem="x9D-U1-k6J" secondAttribute="top" constant="5" id="VrJ-R7-eJ4"/>
                             <constraint firstItem="x9D-U1-k6J" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="kju-hU-4Cz" secondAttribute="trailing" constant="353" id="X4d-0f-s4L"/>
                             <constraint firstItem="qBc-yT-C0S" firstAttribute="leading" secondItem="x9D-U1-k6J" secondAttribute="leading" id="abI-bN-CdD"/>
+                            <constraint firstItem="kju-hU-4Cz" firstAttribute="top" secondItem="x9D-U1-k6J" secondAttribute="top" constant="5" id="ey0-Kn-fUR"/>
                             <constraint firstAttribute="bottom" secondItem="qBc-yT-C0S" secondAttribute="bottom" id="heg-Tn-x7F"/>
                             <constraint firstItem="KrC-HC-s4N" firstAttribute="width" secondItem="NNg-V4-iaN" secondAttribute="width" id="viL-sr-56q"/>
                         </constraints>
@@ -210,7 +207,6 @@
                         <outlet property="labelCityOfResidence" destination="6Zm-pg-oVs" id="Yrj-9w-QR2"/>
                         <outlet property="labelLaureateMotivation" destination="YWi-bB-dyb" id="0wG-qE-MfB"/>
                         <outlet property="labelLink1" destination="Kfb-M3-G82" id="NSf-ft-n3J"/>
-                        <outlet property="labelLink2" destination="S7p-Ll-ZZF" id="jVo-Kb-VaM"/>
                         <outlet property="labelNobelUniAndCategory" destination="riZ-vO-7Hm" id="Usc-XC-fxP"/>
                         <outlet property="labelTitleLaureate" destination="umv-1E-hoP" id="8ed-Yl-ywX"/>
                     </connections>

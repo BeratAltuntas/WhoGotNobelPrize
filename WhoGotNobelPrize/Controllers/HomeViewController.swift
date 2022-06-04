@@ -13,13 +13,16 @@ enum HomeViewControllerConstants {
 
 // MARK: - HomeViewController
 final class HomeViewController: UIViewController {
+	@IBOutlet private weak var labelDate: UILabel!
+	@IBOutlet private weak var tableView: UITableView!
+	
 	internal var viewModel: HomeViewModelProtocol! {
 		didSet {
 			viewModel.delegate = self
 		}
 	}
-	@IBOutlet private weak var labelDate: UILabel!
-	@IBOutlet private weak var tableView: UITableView!
+	
+	internal var selectedIndex = 0
 	override func viewDidLoad() {
 		self.viewModel = HomeViewModel()
 		viewModel.LoadUI()
@@ -29,16 +32,18 @@ final class HomeViewController: UIViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == HomeViewControllerConstants.tableViewCellIdentifier {
-			let targetVC = segue.destination as! DetailViewController
-			targetVC.viewModel = DetailViewModel()
+		if let laureate = viewModel.winners?[selectedIndex] {
+			if segue.identifier == HomeViewControllerConstants.segueIndetifier {
+				let targetVC = segue.destination as! DetailViewController
+				targetVC.viewModel = DetailViewModel()
+				targetVC.selectedLaureate = laureate
+			}
 		}
 	}
 }
 
 // MARK: - Extension: HomeViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
-	
 	func ReloadTableView() {
 		DispatchQueue.main.async { [weak self] in
 			self?.tableView.reloadData()

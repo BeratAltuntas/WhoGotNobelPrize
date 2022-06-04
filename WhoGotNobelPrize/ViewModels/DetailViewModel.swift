@@ -10,11 +10,13 @@ import Foundation
 // MARK: - DetailViewProtocol
 protocol DetailViewProtocol {
 	var delegate: DetailViewDelegate? { get set }
+	func LoadUI(url: String)
 }
 
 // MARK: - DetailViewDelegate
 protocol DetailViewDelegate: AnyObject {
-	
+	func LoadImageView(imageData: Data)
+	func LoadUIAttiributes()
 }
 
 // MARK: - DetailViewModel
@@ -36,12 +38,17 @@ final class DetailViewModel {
 		}
 		return ""
 	}
-	func FetchPerson() {
-		let path = "https://www.nobelprize.org/prizes/chemistry/1901/summary/"
-		NetworkManager.shared.FetchData(endPoint: path) { [weak self] success, response in
+	func FetchLaureateImage(url: String) {
+		
+		NetworkManager.shared.FetchData(endPoint: url) { [weak self] success, response in
 			if success {
 				if let imageUrl = URL(string: (self?.ParseStringToUrl(string: response))!) {
-					KingFisherManager.shared.LoadImage(withUrl: imageUrl)
+					KingFisherManager.shared.LoadImage(withUrl: imageUrl) { [weak self]successKF, image in
+						if successKF {
+							guard let data = image.pngData() else { return }
+							self?.delegate?.LoadImageView(imageData: data)
+						}
+					}
 				}
 			}
 		}
@@ -50,5 +57,8 @@ final class DetailViewModel {
 
 // MARK: - Extension: DetailViewProtocol
 extension DetailViewModel: DetailViewProtocol {
-	
+	func LoadUI(url: String) {
+		FetchLaureateImage(url: url)
+		delegate?.LoadUIAttiributes()
+	}
 }

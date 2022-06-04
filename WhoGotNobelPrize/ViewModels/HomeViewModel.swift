@@ -9,7 +9,7 @@ import Foundation
 
 private enum DateConstants {
 	static let months = ["JAN","FEB","MARCH","APR","MAY","JUNE","JULY","AUG","SEPT","OCT","NOV","DEC"]
-	static let weekDays = ["MON","TUE","THUR","WED","FRI","SAT","SUN"]
+	static let weekDays = ["SUN","MON","TUE","THUR","WED","FRI","SAT"]
 }
 
 // MARK: - HomeViewModelProtocol
@@ -35,7 +35,7 @@ final class HomeViewModel {
 		let weekDay = Calendar.current.component(.weekday, from: date)
 		let day = Calendar.current.component(.day, from: date)
 		let month = Calendar.current.component(.month, from: date)
-		return "\(DateConstants.weekDays[weekDay-2]),\(DateConstants.months[month]) \(day)"
+		return "\(DateConstants.weekDays[weekDay-1]),\(DateConstants.months[month-1]) \(day)"
 	}
 	func FetchData() {
 		NetworkManager.shared.FetchData(endPoint: Config.laureateUrl, type: LaureatesModel?.self) { [weak self] response in
