@@ -6,6 +6,10 @@
 //
 
 import UIKit
+enum HomeViewControllerConstants {
+	static let segueIndetifier = ""
+	static let tableViewCellIdentifier = ""
+}
 
 // MARK: - HomeViewController
 final class HomeViewController: UIViewController {
@@ -16,6 +20,13 @@ final class HomeViewController: UIViewController {
 	}
 	override func viewDidLoad() {
 		viewModel.FetchData()
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == HomeViewControllerConstants.tableViewCellIdentifier {
+			let targetVC = segue.destination as! DetailViewController
+			targetVC.viewModel = DetailViewModel()
+		}
 	}
 }
 

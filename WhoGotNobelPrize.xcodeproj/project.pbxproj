@@ -17,6 +17,7 @@
 		F417D3642843FCB8009F8693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F417D3632843FCB8009F8693 /* Main.storyboard */; };
 		F417D3662843FCEB009F8693 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D3652843FCEB009F8693 /* DetailViewController.swift */; };
 		F417D3682843FCFB009F8693 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D3672843FCFB009F8693 /* DetailViewModel.swift */; };
+		F478AF6D284B7F4D003B22F7 /* HomeViewController-TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F478AF6C284B7F4D003B22F7 /* HomeViewController-TableViewExtensions.swift */; };
 		F4C1330E284A721900C33E13 /* KingFisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1330D284A721900C33E13 /* KingFisherManager.swift */; };
 		F4D7DD3F2846A5C600B3A235 /* LaureateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */; };
 		F4D7DD412846A72000B3A235 /* NobelPrizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */; };
@@ -39,6 +40,7 @@
 		F417D3632843FCB8009F8693 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F417D3652843FCEB009F8693 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F417D3672843FCFB009F8693 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F478AF6C284B7F4D003B22F7 /* HomeViewController-TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController-TableViewExtensions.swift"; sourceTree = "<group>"; };
 		F4C1330D284A721900C33E13 /* KingFisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherManager.swift; sourceTree = "<group>"; };
 		F4D7DD3E2846A5C600B3A235 /* LaureateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureateModel.swift; sourceTree = "<group>"; };
 		F4D7DD402846A72000B3A235 /* NobelPrizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeModel.swift; sourceTree = "<group>"; };
@@ -64,7 +66,6 @@
 				7762A3B3A3D1A475D44B8607 /* Pods-WhoGotNobelPrize.debug.xcconfig */,
 				1B5B2D9132BA59A51400EACC /* Pods-WhoGotNobelPrize.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 		F417D34528422ED3009F8693 /* WhoGotNobelPrize */ = {
 			isa = PBXGroup;
 			children = (
+				F478AF6B284B7F36003B22F7 /* Extensions */,
 				F4D7DD422846A82600B3A235 /* Managers */,
 				F417D35E28422F5A009F8693 /* Supporting Files */,
 				F417D35D28422F4F009F8693 /* Models */,
@@ -153,6 +155,14 @@
 				F417D34F28422ED5009F8693 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F478AF6B284B7F36003B22F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F478AF6C284B7F4D003B22F7 /* HomeViewController-TableViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F4D7DD422846A82600B3A235 /* Managers */ = {
@@ -280,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D7DD442846A83B00B3A235 /* NetworkManager.swift in Sources */,
+				F478AF6D284B7F4D003B22F7 /* HomeViewController-TableViewExtensions.swift in Sources */,
 				F4D7DD3F2846A5C600B3A235 /* LaureateModel.swift in Sources */,
 				F417D34B28422ED3009F8693 /* HomeViewController.swift in Sources */,
 				F4D7DD4A2846ACC700B3A235 /* config.swift in Sources */,
